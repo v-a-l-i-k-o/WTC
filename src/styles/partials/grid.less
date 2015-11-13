@@ -1,0 +1,66 @@
+/* ===== GRID ===== */
+// Defaults which you can freely override
+@column-width: 80;
+@columns: 12;
+@gutter: 0;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width*@columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: @gridsystem-width;
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+@min-width: 960;
+@correction: .5 / @min-width * 100 * 1%;
+
+.clearfix() {
+	*zoom: 1;
+	
+	&:before,
+	&:after {
+	    content: '';
+	    display: table;
+	}
+	&:after {
+	    clear: both;
+	}
+}
+
+body {
+	width: 100%;
+	.clearfix;
+}
+
+.row(@columns:@columns) {
+	.clearfix;
+	display: block;
+	margin: 0 @total-width*((@gutter / @gridsystem-width)*-1);
+	*margin: 0 @total-width*((@gutter / @gridsystem-width)*-1)-@correction;
+}
+
+.col__f(@x,@columns:@columns) {
+	float: left;
+	*display: inline;
+	display: inline-block;
+	padding: 0 @total-width*(@gutter / @gridsystem-width);
+	width: @total-width*((@column-width*@x) / @gridsystem-width);
+	*width: @total-width*((@column-width*@x) / @gridsystem-width)-@correction;
+}
+
+.col(@x,@columns:@columns) {
+	*display: inline;
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 @total-width*(@gutter / @gridsystem-width);
+	width: @total-width*((@column-width*@x) / @gridsystem-width);
+	*width: @total-width*((@column-width*@x) / @gridsystem-width)-@correction;
+}
+
+.push(@offset:1) {
+	margin-left: @total-width*((@column-width*@offset) / @gridsystem-width);
+}
+
+.pull(@offset:1) {
+	margin-right: @total-width*((@column-width*@offset) / @gridsystem-width);
+}

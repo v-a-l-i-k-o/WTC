@@ -1,0 +1,644 @@
+﻿@import "grid.less";
+@total-width: 100%;
+@gutter: 0;
+
+/* ===== #AUTHOR'S STYLES ===== */
+
+/* ----- general rules ----- */
+
+html {
+	font-weight: 400;
+	font-family: 'Arial';
+	letter-spacing: .09rem;
+}
+
+.container {
+	margin:    0 auto;
+	padding: 0 1.5rem;
+	max-width: 100.6rem;
+}
+
+h2 {
+	color: #547792;
+	font-size: 4.8em;
+	text-transform: uppercase;
+}
+
+h3 { text-transform: uppercase; }
+
+p {
+	color: #454545;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+
+button {
+	color: #fff;
+	height: 3.7rem;
+	width: 21.8rem;
+	line-height: 2rem;
+	font-size: 1.4rem;
+	border-radius: .5rem;
+	background-color: #eca154;
+	border: .1rem solid rgba(212, 133, 28, .79);
+	box-shadow: .15rem .26rem .1rem rgba(0, 0, 0, .27);
+}
+
+.hidden {
+	display: none;
+}
+
+.toTop {
+	display: none;
+}
+
+/* ----- HEADER ----- */
+
+.header-top {
+	padding: 1.5rem 0;
+	background-color: #454545;
+
+	& button {
+		float: right;
+	}
+}
+
+.provision {
+	float: left;
+	line-height: 3.7rem;
+
+	& li {
+		color: #eca154;
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		display: inline-block;
+	}
+
+	& span {
+		padding-right: .3em;
+	}
+
+	& li + li {
+		border-left: .1rem solid #eca154;
+	}
+
+	& li + li span {
+		padding-left: .5em;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+.provision li {	
+	font-size: 1.5rem;
+}
+}
+
+.header-bottom {
+	text-align: center;
+	background: linear-gradient(90deg,  #547792 30%, #fff 30%);
+}
+
+.institute {
+	color: #fff;
+	float: left;
+	text-align: left;
+	background-color: #547792;
+	padding: .5rem 1rem .5rem 0;
+
+	h3 { 
+		font-size: 1.5em; 
+	}
+
+	span {
+		font-size: 1.2em;
+		font-weight: 700;
+		display: inline-block;
+	}
+}
+
+.location {
+	color: #454545;
+	padding: .5rem 0;
+	display: inline-block;
+
+	h3 { 
+		font-size: 1.2em; 
+	}
+
+	span {
+		font-size: 1.1em;
+		font-weight: 700;
+		letter-spacing: 0;
+	}	
+}
+
+.contacts {
+	width: 25%;
+	float: right;
+	padding: .5rem 0;
+	text-align: right;
+
+	& a {
+		color: #454545;
+		font-size: 1.3em;
+	}
+
+	& a:first-child { font-weight: 700; }
+	& a:last-child  { letter-spacing: 0; }
+}
+
+/* ----- NAV ----- */
+
+nav {
+	background-color: rgba(124, 135, 142, .1);
+}
+
+.nav-menu {
+	margin-left:  -2.5rem;
+	margin-right: -3.5rem;
+
+	& li {
+		display: inline-block;
+	}
+
+	& li:hover {
+		background-color: rgba(124, 135, 142, .2);	
+	}
+
+	& .aboutUs { 
+		width: 10%;
+		text-align: left; 
+		padding-left: 2.5rem;
+	}
+
+	& .trenings { width: 15%; }
+	& .course   { width: 25%; }
+	& .wtc      { width: 20%; }
+	& .contact  { width: 15%; }
+	& .partner  { 
+		width: 15%;
+		text-align: right;
+		padding-right: 3.5rem;
+	}
+
+	& a {
+		width: 100%;
+		height: 5rem;
+		color: #07495a;
+		font-size: 1.2em;
+		font-weight: 700;
+		line-height: 5rem;
+		display: inline-block;
+		text-transform: uppercase;
+
+	}
+
+	& span {
+		line-height: normal;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+/* ----- SECTION description ----- */
+
+.description {
+	height: 60.2rem;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size:       cover;
+	background-image: url(../img/description-bg.png);
+
+	& .container {
+		top: 50%;
+		position: relative;
+		transform: translateY(-50%);
+	}
+}
+
+.description_cell {
+	width:    42%;
+	height: .1rem;
+	display: inline-block;
+}
+
+.description_text {
+	width: 57%;
+	color: #fff;
+	position: relative;
+	display: inline-block;
+
+	& p {
+		color: #fff;
+	}
+
+	& p + p {
+		margin-top: 1.1em;
+	}
+
+	& img {
+		left: -5.9rem;
+		position: absolute;
+	}
+}
+
+/* ----- SECTION about-us ----- */
+
+.about-us {
+
+	& .container {
+		padding-top:      3rem;
+		padding-bottom: 7.5rem;
+	}
+
+	& h2 {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	& p {
+		text-align: justify;
+	}
+
+	& p + p {
+		margin-top: 1.1em;
+	}
+
+	& p:last-child {
+		font-weight: 700;
+	}
+}
+
+/* ----- SECTION trainings ----- */
+
+.trainings {
+	background-color: #f2f3f3;
+
+	& .container {
+		text-align: center;
+		padding-top:    3rem;
+		padding-bottom: 3rem;
+
+		& > p {
+			margin-bottom: 5rem;
+		}
+	}
+
+	& h2 {
+		margin-bottom: .7rem;
+	}
+
+	& span {
+		color: #547792;
+		font-size: 2.4em;
+		font-weight: 700;
+		line-height: .75em;
+		margin-bottom: 2.2rem;
+		display: inline-block;
+		text-transform: uppercase;
+	}
+}
+
+.trainings_partitions {
+	padding-bottom: .5rem;
+
+	& .items {
+		.col(4);
+		.clearfix;
+		padding: 0 4rem;
+		text-align: left;
+		margin-bottom: 6.5rem;
+	}
+
+	& img {
+		float: left;
+		margin-top: -.25rem;
+	}
+
+	& p {
+		font-size: 1.6em;
+		padding-left: 7.3rem;
+	}
+}
+
+.trainings_text {
+	margin-bottom: 4rem;
+	
+	& p {
+		text-align: justify;
+	}
+
+	& p + p {
+		margin-top: 1.1em;
+	}
+}
+
+.invite {
+	width: 60%;
+	margin: 0 auto;
+
+	& p {
+		font-weight: 700;
+		margin-bottom: 3rem;
+	}
+
+	& div {
+		width: 50%;
+		padding: 1.5rem 0;
+		text-align: center;
+		display: inline-block;
+	}
+
+	& div + div {
+		border-left-color: #d9dade;
+		border-left-width:   .2rem;
+		border-left-style:   solid;
+	}
+}
+
+/* ----- SECTION courses ----- */
+
+.courses {
+
+	& .container {
+		padding-top:    4rem;
+		padding-bottom: 4rem;
+	}
+
+	& h2 {
+		text-align: center;
+	}
+
+	& span {
+		display: block;
+		color: #547792;
+		line-height: .8;
+		font-size: 3.1em;
+		text-align: center;
+		margin-bottom: 4rem;
+		text-transform: uppercase;
+	}
+}
+
+.courses_programms {
+	display: table;
+}
+
+button + .courses_programms {
+	margin-top: 5rem;
+} 
+
+.programms-title {
+	color: #454545;
+	font-size: 1.4em;
+	font-weight: 700;
+	margin-bottom: 4rem;
+	display: table-caption;
+	text-transform: uppercase;
+}
+
+.programms-item {
+	margin-bottom: 4rem;
+}
+
+.date {
+	display: table-cell;
+
+	& div {
+		width:  9.7rem;
+		height: 9.7rem;
+		border-radius: 50%;
+		border: #07495a solid .3rem;
+	}
+
+	& .num {
+		line-height: 1;
+		font-size: 4.8em;
+		margin: 1rem 0 0;
+		text-transform: lowercase;
+	}
+
+	& .month {
+		font-size: 1.4em;
+		font-weight: 700;
+		text-transform: lowercase;
+	}
+}
+
+.programms-item:nth-child(odd) {
+
+	& .month {
+		line-height:  .5;
+		margin: 2rem 0 0;
+		font-size: 1.4em;
+		font-weight: 700;
+	}
+
+	& .num {
+		font-size:   3em;
+		font-weight: 400;
+	}
+}
+
+.programms-item_text {
+	padding-left: 2rem;
+	display: table-cell;
+	vertical-align: top;
+
+	& h3 {
+		color: #07495a;
+		font-size: 1.4em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	& p {
+		color: #454545;
+	}
+
+	& p + p {
+		margin-top: 2rem;
+	}
+}
+
+.show-more {
+	color: #07495a;
+	cursor: pointer;
+	font-size: 1.4em;
+	font-weight: 700;
+	line-height: 2em;
+	position: relative;
+	margin-bottom: 3rem;
+	display: inline-block;
+	text-transform: uppercase;
+
+	&:after {
+		content: '';
+		width: 1.5rem;
+		height: .8rem;
+		position: absolute;
+		margin-top: -.3rem;
+		top: 50%; left: 13rem;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-image: url('../img/arrowDown.png');
+	}
+}
+
+/* ----- SECTION wtc-positioning ----- */
+
+.wtc-positioning {
+	background-color: #f2f3f3;
+
+	& .container {
+		padding-top:    3rem;
+		padding-bottom: 3rem;
+	}
+
+	& h2 {
+		text-align: center;
+	}
+
+	& span {
+		display: block;
+		color: #547792;
+		line-height: .8;
+		font-size: 3.1em;
+		text-align: center;
+		margin-bottom: 4rem;
+		text-transform: uppercase;
+	}
+
+	& p {
+		margin-bottom: 3rem;
+	}
+}
+
+.brand {
+	min-height: 32.7rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size:       cover;
+	background-image: url('../img/brand.png');
+}
+
+/* ----- SECTION our-team----- */
+
+.our-team {
+
+	& .container {
+		text-align: center;
+		padding-top:     3rem;
+		padding-bottom: 10rem;
+	}
+
+	& h2 {
+		margin-bottom: 7rem;
+	}
+}
+
+.our-team_members {
+	width: 78rem;
+	margin: 0 auto;
+
+	& .item {
+		.col(6);
+		.clearfix;
+		padding: 0 4.5rem;
+	}
+
+	& img {
+		float: left;
+		border-radius: 50%;
+	}
+
+	& p {
+		font-size: 1.2em;
+		text-align: left;
+		line-height: normal;
+		padding-left: 10rem;
+	}
+
+	& span {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	& i {
+		font-weight: 700;
+	}
+}
+
+/* ----- SECTION partners----- */
+
+.partners {
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 4.5rem;
+	background-color: #f2f3f3;
+
+	& h2 {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.partners_members {
+	width: 78rem;
+	margin: 0 auto 2rem;
+
+	& .item {
+		width: 48%;
+		height: 12rem;
+		text-align: center;
+		position: relative;
+		margin-bottom: 2rem;
+		background-color: #fff;
+	}
+
+	& .item:nth-child(odd) {
+		float: left;
+	}
+
+	& .item:nth-child(even) {
+		float: right;
+	}
+
+	& img {
+		top: 50%;
+		position: relative;
+		vertical-align: middle;
+		transform: translateY(-50%);
+	}
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight:  400;
+	line-height: 2rem;
+	padding: 2.4rem 0;
+	text-align: center;
+	background-color: #454545;
+}
+
+/* ----- toTop ----- */
+
+.toTop {
+    width:  5em;
+    height: 5em;
+    line-height: 5em;
+    text-align: center;
+    border: #547792 solid .1rem;
+
+    &:hover {
+        opacity: 1;
+    	background-color: #547792;
+    }
+
+    & img {
+        margin-top: -.5em;
+    }
+}

@@ -1,0 +1,55 @@
+/* ===== SHUFFLE ===== */
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.picture-item {
+  margin: 0;
+}
+
+.picture-item__details {
+  left:   0;
+  bottom: 0;
+  width: 100%;
+  color: white; 
+  position: absolute;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.picture-item .picture-item__inner {
+  height: 100%; 
+}
+
+.picture-item img {
+  width:  100%;
+  height: auto; 
+  display: block;
+}
+
+.picture-item .picture-item__details {
+  padding: 1em; 
+}
+
+.picture-item .picture-item__tags {
+  margin: 0; 
+}
+
+/*
+  Shuffle needs either relative or absolute positioning on the container
+  It will set it for you, but it'll cause another style recalculation and layout.
+  AKA worse performance - so just set it here
+ */
+
+.shuffle--container {
+  overflow: hidden; 
+  position: relative;
+}
+
+.shuffle--fluid .shuffle__sizer {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden; 
+}
